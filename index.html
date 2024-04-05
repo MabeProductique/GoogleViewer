@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Model Viewer</title>
+
+    <!-- Import the component PROD
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>-->
+
+    <!-- Import the component DEV-->
+    <script type="module"
+        src="https://modelviewer.dev/node_modules/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <!-- Use it like any other HTML element -->
+    <model-viewer
+        alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
+        src="assets/NeilArmstrong.glb" ar environment-image="assets/moon_1k.hdr" poster="assets/NeilArmstrong.webp" shadow-intensity="1"
+        camera-controls touch-action="pan-y"></model-viewer>
+</body>
+
+</html>
