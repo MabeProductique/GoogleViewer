@@ -1,6 +1,6 @@
 
 //Models
-const modelsChoice = ['Canoe', 'Chair', 'GeoPlanter', 'Mixer', 'NeilArmstrong', 'ToyTrain']
+const modelsChoice = ['Escalier1','Escalier2','Canoe', 'Chair', 'GeoPlanter', 'Mixer', 'NeilArmstrong', 'ToyTrain']
 
 //Load User Models Choice
 const modelsOption = document.getElementById('models');
@@ -31,4 +31,3 @@ document.addEventListener("DOMContentLoaded", function () {
     modelViewer.setAttribute('alt', selectedFileName)
   })
 })
-
