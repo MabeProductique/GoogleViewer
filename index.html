@@ -17,6 +17,7 @@
 
   <!-- Import the component PROD-->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+  <!-- PROD-->
   <!-- Import the component DEV
   <script type="module" src="https://modelviewer.dev/node_modules/@google/model-viewer/dist/model-viewer.min.js"></script>-->
 
@@ -31,24 +32,26 @@
       <div class="sidebar col-md-3 bg-dark text-light">
         <h3>Google Model Viewer</h3>
         <!-- Models -->
-        <label for="models">Choisir un modèle:</label>
-        <select name="models" id="models">
-          <option value="Chargement">Chargement en cours...</option>
+        <label for="modelNames">Choisir un modèle:</label>
+        <select name="modelNames" id="modelNames">
+           <!-- <option value="Chargement">Chargement en cours...</option> -->
         </select>
       </div>
       <!-- Sidebar -->
 
-      <!-- Viewer-->
       <div class="col-md-9">
-        <model-viewer id="modelViewer" src="" poster="" alt="Chargement en cours..." ar
-          environment-image="assets/moon_1k.hdr" shadow-intensity="1" camera-controls
-          touch-action="pan-y"></model-viewer>
-      </div>
-      <!-- Viewer-->
 
+        <!-- Viewer-->
+        <model-viewer id="modelViewer" src="" poster="" alt="Chargement en cours..." ar
+          environment-image="assets/moon_1k.hdr" shadow-intensity="1" camera-controls touch-action="pan-y">
+          <div class="controls">
+            <div>Variant: <select id="variantNames"></select></div>
+          </div>
+        </model-viewer>
+        <!-- Viewer-->
+      </div>
     </div>
   </div>
-
 </body>
 
 </html>
