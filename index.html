@@ -31,24 +31,26 @@
       <!-- Sidebar -->
       <div class="sidebar col-md-3 bg-dark text-light">
         <h3>Google Model Viewer</h3>
-        <!-- Models -->
-        <label for="modelNames">Choisir un modèle:</label>
-        <select name="modelNames" id="modelNames">
-           <!-- <option value="Chargement">Chargement en cours...</option> -->
-        </select>
+
+        <div class="d-inline-grid">
+          <!-- Models -->
+          <label for="modelNames">Choisir un modèle:</label>
+          <select name="modelNames" id="modelNames">
+            <!-- <option value="Chargement">Chargement en cours...</option> -->
+          </select>   
+          <!-- Variants -->
+          <label for="variantNames">Choisir un style:</label>
+          <select name="variantNames" id="variantNames">
+            <!-- <option value="Chargement">Chargement en cours...</option> -->
+          </select>
+        </div>
       </div>
-      <!-- Sidebar -->
 
       <div class="col-md-9">
-
         <!-- Viewer-->
         <model-viewer id="modelViewer" src="" poster="" alt="Chargement en cours..." ar
           environment-image="assets/moon_1k.hdr" shadow-intensity="1" camera-controls touch-action="pan-y">
-          <div class="controls">
-            <div>Variant: <select id="variantNames"></select></div>
-          </div>
         </model-viewer>
-        <!-- Viewer-->
       </div>
     </div>
   </div>

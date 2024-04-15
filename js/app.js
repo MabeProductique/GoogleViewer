@@ -32,21 +32,26 @@ modelNames.addEventListener('change', function () {
 
 modelViewer.addEventListener('load', (event) => {
   console.log('Model loading')
+
   //remove variants
   Array.from(variantNames.children).forEach(child => child.remove());
 
   const names = modelViewer.availableVariants;
-  for (const name of names) {
+  if (names.length > 0) {
+    // Adds all variant option.
+    for (const name of names) {
+      const option = document.createElement('option');
+      option.value = name;
+      option.textContent = name;
+      variantNames.appendChild(option);
+    }
+  } else {
+    // Adds a default option.
     const option = document.createElement('option');
-    option.value = name;
-    option.textContent = name;
-    variantNames.appendChild(option);
-  }
-  // Adds a default option.
-  const option = document.createElement('option');
     option.value = 'default';
     option.textContent = 'Default';
     variantNames.appendChild(option);
+  }
 });
 
 
